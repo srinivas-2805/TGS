@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:tgs_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+app:
+  jwt:
+    secret: test-only-256-bit-secret-key-for-telangana-grammar-school-junit-suite-2026
+    access-expiration-ms: 900000
+    refresh-expiration-ms: 604800000
+  storage:
+    provider: LOCAL
+    local-dir: ./target/test-uploads
+  mail:
+    enabled: false
+  sms:
+    provider: LOG_ONLY
+  payment:
+    provider: MANUAL_ONLY
+  seed:
+    demo-data: true
