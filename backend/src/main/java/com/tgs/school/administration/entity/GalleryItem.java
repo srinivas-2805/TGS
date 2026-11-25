@@ -1,5 +1,6 @@
 package com.tgs.school.administration.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.tgs.school.auth.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -33,6 +34,7 @@ public class GalleryItem {
     @Builder.Default
     private boolean isPublished = true;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_by_user_id")
     private User createdBy;

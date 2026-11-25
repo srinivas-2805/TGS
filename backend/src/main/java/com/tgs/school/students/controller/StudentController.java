@@ -103,6 +103,15 @@ public class StudentController {
                 .body(download.resource());
     }
 
+    @GetMapping("/{id}/id-card/pdf")
+    public ResponseEntity<byte[]> downloadIdCard(@PathVariable Long id) {
+        byte[] pdf = studentService.generateIdCardPdf(id);
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_PDF)
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=TGS-IDCard-" + id + ".pdf")
+                .body(pdf);
+    }
+
     @PostMapping("/{id}/remarks")
     @PreAuthorize("hasAnyRole('SUPER_ADMIN','PRINCIPAL','ADMIN','TEACHER')")
     public ResponseEntity<ApiResponse<RemarkDto>> addRemark(

@@ -62,6 +62,7 @@ public class StudentService {
     private final StorageService storageService;
     private final AccessControlService accessControlService;
     private final AuditService auditService;
+    private final com.tgs.school.reports.service.PdfGeneratorService pdfGeneratorService;
 
     @Data
     public static class AdmitStudentRequest {
@@ -488,6 +489,27 @@ public class StudentService {
     }
 
     public record DocumentDownload(Resource resource, String fileName, String contentType) {}
+
+    @Transactional(readOnly = true)
+    public byte[] generateIdCardPdf(Long studentId) {
+        accessControlService.assertCanAccessStudent(studentId);
+        Student s = studentRepository.findById(studentId)
+                .orElseThrow(() -> new ResourceNotFoundException("Student not found"));
+        StudentDetailDto detail = buildDetailDto(s);
+        EnrollmentDto en = detail.getCurrentEnrollment();
+        ParentLinkDto parent = detail.getParents().isEmpty() ? null : detail.getParents().get(0);
+        return pdfGeneratorService.generateStudentIdCardPdf(new com.tgs.school.reports.service.PdfGeneratorService.IdCardData(
+                detail.getAdmissionNumber(),
+                detail.getFullName(),
+                en != null ? en.getClassName() : "-",
+                en != null ? en.getSectionName() : "-",
+                detail.getDateOfBirth().toString(),
+                detail.getBloodGroup() != null ? detail.getBloodGroup() : "-",
+                parent != null ? parent.getFullName() : "-",
+                parent != null ? parent.getPhone() : "-",
+                en != null ? en.getAcademicYearName() : "-"
+        ));
+    }
 
     @Transactional
     public RemarkDto addRemark(Long studentId, AddRemarkRequest req) {
