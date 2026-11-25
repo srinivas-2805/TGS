@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Telangana Grammar School Official Crest">
+  <circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#0F294A" stroke-width="3"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <path d="M60 16 L92 24 V56 C92 75 77 90 60 97 C43 90 28 75 28 56 V24 Z" fill="#0F294A" stroke="#F59E0B" stroke-width="2"/>
+  <path d="M38 50 V34 Q60 23 82 34 V50" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+  <path d="M46 58 A14 14 0 0 1 74 58 Z" fill="#FBBF24"/>
+  <polygon points="60,25 75,31 60,37 45,31" fill="#FFFFFF"/>
+  <path d="M38 61 Q49 56 60 62 Q71 56 82 61 V76 Q71 71 60 77 Q49 71 38 76 Z" fill="#FFFFFF"/>
+  <line x1="60" y1="62" x2="60" y2="77" stroke="#1D4ED8" stroke-width="1.8"/>
+  <path d="M42 81 Q51 87 60 87 Q52 80 42 81 Z" fill="#10B981"/>
+  <path d="M78 81 Q69 87 60 87 Q68 80 78 81 Z" fill="#10B981"/>
+  <text x="60" y="109" text-anchor="middle" font-family="Georgia, serif" font-size="8.5" font-weight="700" fill="#0F294A">TELANGANA GRAMMAR SCHOOL</text>
+</svg>

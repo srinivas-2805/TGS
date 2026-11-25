@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 110" width="360" height="110" role="img" aria-label="Telangana Grammar School Logo">
+  <defs>
+    <linearGradient id="tgsSunGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="tgsShieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F294A"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Crest Emblem -->
+  <g transform="translate(8, 7)">
+    <!-- Shield Outer -->
+    <path d="M48 4 L88 14 V50 C88 72 69 88 48 96 C27 88 8 72 8 50 V14 Z" fill="url(#tgsShieldGrad)" stroke="#F59E0B" stroke-width="2.5"/>
+    <!-- Subtle Kakatiya Thoranam inspired inner arch -->
+    <path d="M22 44 V26 Q48 14 74 26 V44" fill="none" stroke="#FBBF24" stroke-width="1.6" stroke-opacity="0.75"/>
+    <path d="M18 28 H26 M70 28 H78" stroke="#FBBF24" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.75"/>
+
+    <!-- Rising Sun -->
+    <path d="M32 54 A16 16 0 0 1 64 54 Z" fill="url(#tgsSunGrad)"/>
+    <g stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round">
+      <line x1="48" y1="31" x2="48" y2="35"/>
+      <line x1="35" y1="36" x2="38" y2="39"/>
+      <line x1="61" y1="36" x2="58" y2="39"/>
+      <line x1="28" y1="46" x2="32" y2="48"/>
+      <line x1="68" y1="46" x2="64" y2="48"/>
+    </g>
+
+    <!-- Graduation Cap -->
+    <polygon points="48,18 65,25 48,32 31,25" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.2"/>
+    <path d="M38 28 V34 C38 37 58 37 58 34 V28" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="63" y1="26" x2="63" y2="36" stroke="#F59E0B" stroke-width="1.6"/>
+    <circle cx="63" cy="37" r="1.8" fill="#F59E0B"/>
+
+    <!-- Open Book -->
+    <path d="M22 57 Q35 52 48 59 Q61 52 74 57 V73 Q61 68 48 75 Q35 68 22 73 Z" fill="#FFFFFF"/>
+    <path d="M48 59 V75" stroke="#1D4ED8" stroke-width="1.8"/>
+    <path d="M27 62 Q37 59 44 63 M27 67 Q37 64 44 68" fill="none" stroke="#1D4ED8" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M69 62 Q59 59 52 63 M69 67 Q59 64 52 68" fill="none" stroke="#1D4ED8" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Subtle Green Growth Leaves -->
+    <path d="M28 79 Q38 86 48 86 Q39 78 28 79 Z" fill="#10B981"/>
+    <path d="M68 79 Q58 86 48 86 Q57 78 68 79 Z" fill="#10B981"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="110" y="42" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#0F294A" letter-spacing="0.4">TELANGANA</text>
+  <text x="110" y="67" font-family="'Segoe UI', Arial, sans-serif" font-size="18.5" font-weight="700" fill="#1D4ED8" letter-spacing="0.8">GRAMMAR SCHOOL</text>
+  <line x1="110" y1="75" x2="342" y2="75" stroke="#F59E0B" stroke-width="2"/>
+  <text x="110" y="92" font-family="'Segoe UI', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#475569" letter-spacing="1.2">KALLURU, KHAMMAM • LKG TO X</text>
+</svg>
